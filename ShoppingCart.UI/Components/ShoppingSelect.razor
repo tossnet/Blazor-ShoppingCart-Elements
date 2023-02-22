@@ -1,0 +1,130 @@
+﻿<MudGrid>
+    <MudItem xs="8">
+        <MudPaper Class="pa-3">
+
+            <MudRadioGroup T="int" 
+                           SelectedOptionChanged="(value) => SoftUnitChanged(value)"
+                           Class="d-flex flex-column flex-grow-1 gap-4" Elevation="0" >
+                <MudStack Spacing="0">
+                    <MudRadio Size="Size.Small" Option="1">1ère licence</MudRadio>
+                    <MudRadio Size="Size.Small" Option="2">+ 1 licence supplémentaire</MudRadio>
+                    <MudRadio Size="Size.Small" Option="3">+ 2 licences supplémentaires</MudRadio>
+                    <MudRadio Size="Size.Small" Option="4">+ 3 licences supplémentaires</MudRadio>
+                    <MudRadio Size="Size.Small" Option="5">
+                        + 4 licences supplémentaires 
+                        <MudTooltip Text="Au delà de 5 licences, nous consulter pour un devis"
+                                    Placement="Placement.Top"
+                                    Arrow="true">
+                            <MudIcon Icon="@Icons.Material.Filled.QuestionMark" 
+                                     Size="Size.Small" />
+                        </MudTooltip>
+                    </MudRadio>
+                </MudStack>
+            </MudRadioGroup>
+
+        </MudPaper>
+
+        <MudPaper Class="pa-1 mt-4">
+            <MudCheckBox CheckedChanged="@((bool v) => OptionChecked(v))">
+                Option HTML (+99.00€) 
+                <MudTooltip Text="Cette option permet de créer les pages HTML de votre planning."
+                            Placement="Placement.Top"
+                            Arrow="true">
+                    <MudIcon Icon="@Icons.Material.Filled.QuestionMark"
+                             Size="Size.Small" />
+                </MudTooltip>
+            </MudCheckBox>
+        </MudPaper>
+
+         <MudPaper Class="pa-4 mt-4" >
+            <MudStack>
+            <MudText Typo="Typo.subtitle1">SodeaSoft Planning Viewer (+79.00 € par unité)</MudText>
+            <MudNumericField T="int"
+                             ValueChanged="(value) => ModuleUnitChanged(value)"
+                             Label="Unité" 
+                             Variant="Variant.Text" 
+                             Min="0" 
+                             Max="10"
+                             Style="width:100px;" />
+            </MudStack>
+        </MudPaper>
+
+
+        <MudPaper Class="pa-4 mt-4">
+            <MudStack>
+                <MudText Typo="Typo.subtitle1">Formation en ligne. Session de 60 min. (75.00 € HT)</MudText>
+                <MudNumericField T="int"
+                                 ValueChanged="(value) => TrainingUnitChanged(value)"
+                                 Label="Unité"
+                                 Variant="Variant.Text"
+                                 Min="0"
+                                 Max="@cart.SoftwareUnit"
+                                 Style="width:100px;" />
+            </MudStack>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="4">
+        <MudText Typo="Typo.h5">Votre panier</MudText>
+
+        <MudPaper Class="mt-3">
+            <MudList Clickable="false">
+                <MudListItem >
+                    <div class="d-flex justify-space-between flex-grow-1">
+                        <span>Logiciel</span> 
+                        <span class="text-success">@cart.SoftwareUnit unités</span>
+                    </div>
+                </MudListItem>
+
+
+                @if (cart.OptionUnit) {
+                    <MudDivider />
+
+                    <MudListItem>
+                        <div class="d-flex justify-space-between flex-grow-1">
+                            <span>Option</span>
+                            <span class="text-success">1 unité</span>
+                        </div>
+                    </MudListItem>
+                }
+
+                @if (cart.ModuleUnit > 0) {
+
+                    <MudDivider />
+
+                    <MudListItem>
+                        <div class="d-flex justify-space-between flex-grow-1">
+                            <span>Module</span>
+                            <span class="text-success">@cart.ModuleUnit unités</span>
+                        </div>
+                    </MudListItem>
+                }
+
+                @if (cart.TrainingUnit > 0) {
+
+                    <MudDivider />
+
+                    <MudListItem>
+                        <div class="d-flex justify-space-between flex-grow-1">
+                            <span>eFormation</span>
+                            <span class="text-success">@cart.TrainingUnit unités</span>
+                        </div>
+                    </MudListItem>
+                }
+
+                <MudDivider />
+
+                <MudListItem>
+                    <div class="d-flex justify-space-between flex-grow-1">
+                        <span><p class="total">Total</p></span>
+                        <span><p class="total">2 € HT</p></span>
+                    </div>
+                </MudListItem>
+            </MudList>
+        </MudPaper>
+
+        <MudButton Class="mt-4"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary">Etape suivante</MudButton>
+    </MudItem>
+</MudGrid>
