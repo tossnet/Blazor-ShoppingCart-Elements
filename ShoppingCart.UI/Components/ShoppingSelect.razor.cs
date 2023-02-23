@@ -17,7 +17,7 @@ public partial class ShoppingSelect {
     public double ModuleUnitPrice { get; set; } = 999;
 
     [Parameter]
-    public double TrainingUnitPrice { get; set; }
+    public double TrainingUnitPrice { get; set; } = 75;
 
     [Parameter]
     public EventCallback<Cart> CartValidated { get; set; }
