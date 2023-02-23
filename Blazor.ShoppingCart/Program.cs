@@ -1,4 +1,4 @@
-using Blazor.ShoppingCart;
+using Blazor.ShoppingCart.Wasm;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Globalization;
