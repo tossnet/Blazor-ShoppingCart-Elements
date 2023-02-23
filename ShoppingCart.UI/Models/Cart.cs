@@ -1,6 +1,5 @@
 ﻿namespace ShoppingCart.UI.Models;
 
-
 public class Cart {
 
     private const double DISCOUNT2 = 0.80;

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33417.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.ShoppingCart", "Blazor.ShoppingCart\Blazor.ShoppingCart.csproj", "{C9F336B5-DEC1-4297-887C-793539C70626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptyBlazorServer", "EmptyBlazorServer\EmptyBlazorServer.csproj", "{2CE92A1F-391A-4608-9D20-085AE85E8CB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.ShoppingCart.Server", "EmptyBlazorServer\Blazor.ShoppingCart.Server.csproj", "{2CE92A1F-391A-4608-9D20-085AE85E8CB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.UI", "ShoppingCart.UI\ShoppingCart.UI.csproj", "{4D0935FB-B472-427F-8026-9D138C75A0FE}"
 EndProject

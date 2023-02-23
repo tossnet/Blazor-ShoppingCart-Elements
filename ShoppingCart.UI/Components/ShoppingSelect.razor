@@ -6,7 +6,7 @@
                     <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault1" checked
                            @onchange="@(() => SoftUnitChanged(1))">
                     <label class="form-check-label" for="flexRadioDefault1">
-                        1ère licence (@String.Format("{0:C}",Cart.GetSoftwarePrice(1)))
+                        1ère licence (@String.Format("{0:C}",Cart.GetSoftwarePrice(1), Culture))
                     </label>
                 </div>
                 <div class="form-check">

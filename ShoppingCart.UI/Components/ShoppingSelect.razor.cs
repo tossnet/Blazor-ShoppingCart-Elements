@@ -3,6 +3,7 @@
 using Microsoft.AspNetCore.Components;
 using ShoppingCart.UI.Models;
 using ShoppingCart.UI.Services;
+using System.Globalization;
 
 public partial class ShoppingSelect {
 
@@ -44,11 +45,20 @@ public partial class ShoppingSelect {
         Cart.ModuleUnitPrice = ModuleUnitPrice;
         Cart.TrainingUnitPrice = TrainingUnitPrice;
 
+        ComputePrice();
+
         base.OnParametersSet();
     }
 
+    CultureInfo Culture;
+    protected override void OnInitialized() {
 
-    
+        Culture = new("fr-FR");
+
+        base.OnInitialized();
+    }
+
+
     private void SoftUnitChanged(int softunit) {
         Cart.SoftwareUnit = softunit;
 
