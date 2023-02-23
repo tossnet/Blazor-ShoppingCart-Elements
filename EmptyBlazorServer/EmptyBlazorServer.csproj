@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MudBlazor" Version="6.1.9" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ShoppingCart.UI\ShoppingCart.UI.csproj" />
   </ItemGroup>
 

@@ -1,130 +1,169 @@
-﻿<MudGrid>
-    <MudItem xs="8">
-        <MudPaper Class="pa-3">
+﻿<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <div class="card ps-4 py-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault1" checked
+                           @onchange="@(() => SoftUnitChanged(1))">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        1ère licence (@String.Format("{0:C}",Cart.GetSoftwarePrice(1)))
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault2"
+                           @onchange="@(() => SoftUnitChanged(2))">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        + 1 licence supplémentaire (+ @String.Format("{0:C}",Cart.GetSoftwarePrice(2)))
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault3"
+                           @onchange="@(() => SoftUnitChanged(3))">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        + 2 licences supplémentaires (+ @String.Format("{0:C}",Cart.GetSoftwarePrice(3)))
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault4"
+                           @onchange="@(() => SoftUnitChanged(4))">
+                    <label class="form-check-label" for="flexRadioDefault4">
+                        + 3 licences supplémentaires (+ @String.Format("{0:C}",Cart.GetSoftwarePrice(4)))
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radiosoft" id="flexRadioDefault5"
+                           @onchange="@(() => SoftUnitChanged(5))">
+                    <label class="form-check-label" for="flexRadioDefault5">
+                        + 4 licences supplémentaires (+ @String.Format("{0:C}",Cart.GetSoftwarePrice(5)))
+                        <a href="#" class="htooltip">
+                            <img src="_content/ShoppingCart.UI/question.svg" width="22" border="0" />
+                            <span>Au delà de 5 licences, nous consulter pour un devis</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
 
-            <MudRadioGroup T="int" 
-                           SelectedOptionChanged="(value) => SoftUnitChanged(value)"
-                           Class="d-flex flex-column flex-grow-1 gap-4" Elevation="0" >
-                <MudStack Spacing="0">
-                    <MudRadio Size="Size.Small" Option="1">1ère licence</MudRadio>
-                    <MudRadio Size="Size.Small" Option="2">+ 1 licence supplémentaire</MudRadio>
-                    <MudRadio Size="Size.Small" Option="3">+ 2 licences supplémentaires</MudRadio>
-                    <MudRadio Size="Size.Small" Option="4">+ 3 licences supplémentaires</MudRadio>
-                    <MudRadio Size="Size.Small" Option="5">
-                        + 4 licences supplémentaires 
-                        <MudTooltip Text="Au delà de 5 licences, nous consulter pour un devis"
-                                    Placement="Placement.Top"
-                                    Arrow="true">
-                            <MudIcon Icon="@Icons.Material.Filled.QuestionMark" 
-                                     Size="Size.Small" />
-                        </MudTooltip>
-                    </MudRadio>
-                </MudStack>
-            </MudRadioGroup>
+            <div class="card mt-2">
+                <div class="form-check ps-4 py-3">
+                    <input class="form-check-input checkbox"
+                           type="checkbox" 
+                           value="" 
+                           id="flexCheckDefault"
+                           checked="@Cart.OptionUnit" 
+                           @oninput="OptionChecked">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Option HTML (+ @String.Format("{0:C}",Cart.OptionUnitPrice))
+                        <a href="#" class="htooltip">
+                            <img src="_content/ShoppingCart.UI/question.svg" width="22" border="0" />
+                            <span>Cette option permet de créer les pages HTML de votre planning.</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
 
-        </MudPaper>
-
-        <MudPaper Class="pa-1 mt-4">
-            <MudCheckBox CheckedChanged="@((bool v) => OptionChecked(v))">
-                Option HTML (+99.00€) 
-                <MudTooltip Text="Cette option permet de créer les pages HTML de votre planning."
-                            Placement="Placement.Top"
-                            Arrow="true">
-                    <MudIcon Icon="@Icons.Material.Filled.QuestionMark"
-                             Size="Size.Small" />
-                </MudTooltip>
-            </MudCheckBox>
-        </MudPaper>
-
-         <MudPaper Class="pa-4 mt-4" >
-            <MudStack>
-            <MudText Typo="Typo.subtitle1">SodeaSoft Planning Viewer (+79.00 € par unité)</MudText>
-            <MudNumericField T="int"
-                             ValueChanged="(value) => ModuleUnitChanged(value)"
-                             Label="Unité" 
-                             Variant="Variant.Text" 
-                             Min="0" 
-                             Max="10"
-                             Style="width:100px;" />
-            </MudStack>
-        </MudPaper>
-
-
-        <MudPaper Class="pa-4 mt-4">
-            <MudStack>
-                <MudText Typo="Typo.subtitle1">Formation en ligne. Session de 60 min. (75.00 € HT)</MudText>
-                <MudNumericField T="int"
-                                 ValueChanged="(value) => TrainingUnitChanged(value)"
-                                 Label="Unité"
-                                 Variant="Variant.Text"
-                                 Min="0"
-                                 Max="@cart.SoftwareUnit"
-                                 Style="width:100px;" />
-            </MudStack>
-        </MudPaper>
-    </MudItem>
-
-    <MudItem xs="4">
-        <MudText Typo="Typo.h5">Votre panier</MudText>
-
-        <MudPaper Class="mt-3">
-            <MudList Clickable="false">
-                <MudListItem >
-                    <div class="d-flex justify-space-between flex-grow-1">
-                        <span>Logiciel</span> 
-                        <span class="text-success">@cart.SoftwareUnit unités</span>
+             <div class="card mt-2" >
+                <div class="ps-4 py-4 row">
+                    <div class=" col-auto order-last order-md-first">
+                        <input class="form-control"
+                               type="number"
+                               id="flexCheckDefault"
+                               min="0"
+                               max="10"
+                               style="width:100px;"
+                               @bind="ModuleUnit"
+                               @bind:event="oninput" />
                     </div>
-                </MudListItem>
+                    <label class="col-form-label col-auto" for="flexCheckDefault">
+                        SodeaSoft Planning Viewer (+ @String.Format("{0:C}",Cart.ModuleUnitPrice) par unité)
+                        <a href="#" class="htooltip">
+                            <img src="_content/ShoppingCart.UI/question.svg" width="22" border="0" />
+                            <span>Ce module complémentaire permet à un collaborateur de votre réseau de visualiser en temps réel le planning, imprimer, voir le détail de chaque tâche mais aucunement de le modifier. Le Viewer est une licence flottante</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
 
 
-                @if (cart.OptionUnit) {
-                    <MudDivider />
-
-                    <MudListItem>
-                        <div class="d-flex justify-space-between flex-grow-1">
-                            <span>Option</span>
-                            <span class="text-success">1 unité</span>
-                        </div>
-                    </MudListItem>
-                }
-
-                @if (cart.ModuleUnit > 0) {
-
-                    <MudDivider />
-
-                    <MudListItem>
-                        <div class="d-flex justify-space-between flex-grow-1">
-                            <span>Module</span>
-                            <span class="text-success">@cart.ModuleUnit unités</span>
-                        </div>
-                    </MudListItem>
-                }
-
-                @if (cart.TrainingUnit > 0) {
-
-                    <MudDivider />
-
-                    <MudListItem>
-                        <div class="d-flex justify-space-between flex-grow-1">
-                            <span>eFormation</span>
-                            <span class="text-success">@cart.TrainingUnit unités</span>
-                        </div>
-                    </MudListItem>
-                }
-
-                <MudDivider />
-
-                <MudListItem>
-                    <div class="d-flex justify-space-between flex-grow-1">
-                        <span><p class="total">Total</p></span>
-                        <span><p class="total">2 € HT</p></span>
+            <div class="card mt-2">
+                <div class="ps-4 py-4 row">
+                    <div class=" col-auto order-last order-md-first">
+                        <select class="form-select form-select-sm"
+                                @onchange="@TrainingUnitChanged">
+                            <option value="0" >-</option>
+                            @for (int i = 1; i <= Cart.SoftwareUnit; i++) {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
                     </div>
-                </MudListItem>
-            </MudList>
-        </MudPaper>
+                    <label class="col-form-label col-auto" for="flexCheckDefault">
+                        Formation en ligne. Session de 60 min. (@String.Format("{0:C}",Cart.TrainingUnitPrice))
+                        <a href="#" class="htooltip">
+                            <img src="_content/ShoppingCart.UI/question.svg" width="22" border="0" />
+                            <span><b>Il vous faut un minimum d’apprentissage :</b><br>Notre formateur par Internet (en écran interposé) vous forme pour vous rendre rapidement opérationel.</span>
+                            </a>
+                    </label>
+                </div>
+            </div>
+        </div>
 
-        <MudButton Class="mt-4"
-                   Variant="Variant.Filled"
-                   Color="Color.Primary">Etape suivante</MudButton>
-    </MudItem>
-</MudGrid>
+        <div class="col-4">
+            <h5>Votre panier</h5>
+
+            <div class="card mt-3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between flex-grow-1">
+                            <span>Logiciel</span>
+                            <span>@GetLabelQuantity(Cart.SoftwareUnit)</span>
+                        </div>
+                    </li>
+
+
+                    @if (Cart.OptionUnit) {
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between flex-grow-1">
+                                <span>Option</span>
+                                <span>1 unité</span>
+                            </div>
+                        </li>
+                    }
+
+                    @if (Cart.ModuleUnit > 0) {
+
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between flex-grow-1">
+                                <span>Module</span>
+                                <span>@GetLabelQuantity(Cart.ModuleUnit)</span>
+                            </div>
+                        </li>
+                    }
+
+                    @if (Cart.TrainingUnit > 0) {
+
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between flex-grow-1">
+                                <span>eFormation</span>
+                                <span>@GetLabelQuantity(Cart.TrainingUnit)</span>
+                            </div>
+                        </li>
+                    }
+
+           
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between flex-grow-1">
+                            <span class="total">Total</span>
+                            <span class="total"> @String.Format("{0:C}", TotalAmount) HT</span>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+
+        <button type="button" 
+                class="btn btn-primary mt-4"
+                @onclick="NextStep">
+                Etape suivante
+        </button>
+
+    </div>
+    </div>
+</div>

@@ -1,3 +1,7 @@
+body {
+    background-color: gainsboro !important;
+}
+
 h1:focus {
     outline: none;
 }

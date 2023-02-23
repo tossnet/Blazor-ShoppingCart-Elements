@@ -4,8 +4,16 @@ using ShoppingCart.UI.Models;
 
 public class PriceCalculation {
 
-    public Cart Calculate(Cart panier) {
+    public double Calculate(Cart panier) {
 
-        return panier;
+        double amount = panier.GetTotalSoftwarePrice();
+
+        amount += Convert.ToDouble(panier.OptionUnit) * panier.OptionUnitPrice;
+
+        amount += Convert.ToDouble(panier.ModuleUnit) * panier.ModuleUnitPrice;
+
+        amount += Convert.ToDouble(panier.TrainingUnit) * panier.TrainingUnitPrice;
+
+        return amount;
     }
 }
