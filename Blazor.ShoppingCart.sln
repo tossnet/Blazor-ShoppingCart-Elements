@@ -5,9 +5,11 @@ VisualStudioVersion = 17.6.33417.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.ShoppingCart.Wasm", "Blazor.ShoppingCart.Wasm\Blazor.ShoppingCart.Wasm.csproj", "{C9F336B5-DEC1-4297-887C-793539C70626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.ShoppingCart.Server", "Blazor.ShoppingCart.Server\Blazor.ShoppingCart.Server.csproj", "{2CE92A1F-391A-4608-9D20-085AE85E8CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.ShoppingCart.Server", "Blazor.ShoppingCart.Server\Blazor.ShoppingCart.Server.csproj", "{2CE92A1F-391A-4608-9D20-085AE85E8CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.UI", "ShoppingCart.UI\ShoppingCart.UI.csproj", "{4D0935FB-B472-427F-8026-9D138C75A0FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.UI", "ShoppingCart.UI\ShoppingCart.UI.csproj", "{4D0935FB-B472-427F-8026-9D138C75A0FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-ShoppingCart", "WPF-ShoppingCart\WPF-ShoppingCart.csproj", "{CC713E07-1609-4165-9AB2-9772CD7E23C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4D0935FB-B472-427F-8026-9D138C75A0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D0935FB-B472-427F-8026-9D138C75A0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D0935FB-B472-427F-8026-9D138C75A0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
