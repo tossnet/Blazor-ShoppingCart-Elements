@@ -26,8 +26,6 @@ public partial class ShoppingSelect {
     private Cart Cart { get; set; } = new();
     private PriceCalculation PriceCalculation { get; set; } = new();
 
-    public double TotalAmount { get; set; }
-
     private int ModuleUnit {
         get => Cart.ModuleUnit;
         set {
@@ -72,7 +70,7 @@ public partial class ShoppingSelect {
     }
 
     private void ComputePrice() {
-        TotalAmount = PriceCalculation.Calculate(Cart);
+        Cart.TotalAmount = PriceCalculation.Calculate(Cart);
     }
 
     private async Task NextStep() {

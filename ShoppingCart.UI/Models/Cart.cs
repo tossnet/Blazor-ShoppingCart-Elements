@@ -45,4 +45,6 @@ public class Cart {
     public bool OptionUnit { get; set; }
     public int TrainingUnit { get; set; }
     public int PlanningViewer { get; set; }
+
+    public double TotalAmount { get; set; }
 }

@@ -6,14 +6,14 @@ public class PriceCalculation {
 
     public double Calculate(Cart panier) {
 
-        double amount = panier.GetTotalSoftwarePrice();
+        panier.TotalAmount = panier.GetTotalSoftwarePrice();
 
-        amount += Convert.ToDouble(panier.OptionUnit) * panier.OptionUnitPrice;
+        panier.TotalAmount += Convert.ToDouble(panier.OptionUnit) * panier.OptionUnitPrice;
 
-        amount += Convert.ToDouble(panier.ModuleUnit) * panier.ModuleUnitPrice;
+        panier.TotalAmount += Convert.ToDouble(panier.ModuleUnit) * panier.ModuleUnitPrice;
 
-        amount += Convert.ToDouble(panier.TrainingUnit) * panier.TrainingUnitPrice;
+        panier.TotalAmount += Convert.ToDouble(panier.TrainingUnit) * panier.TrainingUnitPrice;
 
-        return amount;
+        return panier.TotalAmount;
     }
 }

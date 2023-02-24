@@ -1,5 +1,5 @@
 {
-  "cacheBootResources": true,
+  "cacheBootResources": false,
   "config": [ ],
   "debugBuild": false,
   "entryAssembly": "Blazor.ShoppingCart.Wasm",
@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Blazor.ShoppingCart.Wasm.dll": "sha256-YAvC2BqMjOtAwaufuy640uy8PrVufhcmgPDD\/NJ+0as=",
+      "Blazor.ShoppingCart.Wasm.dll": "sha256-\/WwayDiLJhszfjKnxd\/tpZPbgnaPC8jxNCfz3YMDch0=",
       "Microsoft.AspNetCore.Components.CustomElements.dll": "sha256-4sB4Lyw692a7ftwtSIm71V8becEx05sIf\/c5YWupW3Y=",
       "Microsoft.AspNetCore.Components.dll": "sha256-qjcPvdRO87NBVu\/CRu3n\/MrHN1p+UwfDIxmknqZYH3o=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-2c+65w0bDL9Nw0KSBPsurgrErFunNB8fIYldY6U9zTQ=",
@@ -23,7 +23,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW\/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-L85W0kGe1vzXNUYnqQARFyJyU5KutJYw6dMeZkGsS6Q=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-hUxOrW0i2d4N\/3At6wRqsDMpya9fFCtdE6YcQJb8d40=",
-      "ShoppingCart.UI.dll": "sha256-h+wJKHI4CsNR8fP0AQWkghChL29KZKsnExkd0\/\/eQD8=",
+      "ShoppingCart.UI.dll": "sha256-05KObi\/q8z6nBGvonRQvO\/R\/HvumhagYVZTuOM5fBrM=",
       "System.Collections.Concurrent.dll": "sha256-p\/W+WSIkL9jzyEasd03baj2LYf3Kyz9kwWgFTHUm\/Ss=",
       "System.Collections.dll": "sha256-KmlwoDzV3SlKW2G5dJPrRAODFNd7vrex0h5eUobdavQ=",
       "System.ComponentModel.dll": "sha256-i8l1LCCL8JFSIBljON1cA2eYNziHWE21TXOhsLVQa+Y=",
