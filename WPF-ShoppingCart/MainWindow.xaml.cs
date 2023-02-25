@@ -1,18 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿namespace WPF_ShoppingCart;
+
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using System.Windows.Shapes;
+using ShoppingCart.UI;
 
-namespace WPF_ShoppingCart {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window {
-        public MainWindow() {
-            InitializeComponent();
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window {
+    public MainWindow() {
 
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddWpfBlazorWebView();
-            Resources.Add("services", serviceCollection.BuildServiceProvider());
+        var serviceCollection = new ServiceCollection();
+        serviceCollection.AddWpfBlazorWebView();
+        Resources.Add("services", serviceCollection.BuildServiceProvider());
 
-        }
+        InitializeComponent();
+
     }
 }
