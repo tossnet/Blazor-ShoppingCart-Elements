@@ -1,0 +1,30 @@
+/* _content/ShoppingCart.UI/Components/ShoppingSelect.razor.rz.scp.css */
+.total[b-zu0tewoby6] {
+    font-weight: bold;
+}
+
+.checkbox[b-zu0tewoby6] {
+    float: none !important;
+    margin-left: 0 !important;
+}
+
+.htooltip span[b-zu0tewoby6] {
+    background-color: rgba(0,0,0, 0.8);
+    border-radius: 15px 15px 0px 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin-left: 0px;
+    margin-top: -25px;
+    opacity: 0;
+    padding: 10px 10px 10px 40px;
+    position: absolute;
+    text-decoration: none;
+    visibility: hidden;
+    width: 300px;
+    z-index: 10;
+}
+
+.htooltip:hover span[b-zu0tewoby6] {
+    opacity: 1;
+    visibility: visible;
+}

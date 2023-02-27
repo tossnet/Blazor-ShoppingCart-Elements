@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+declare var DotNet: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,3 +10,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-ShoppingCart';
 }
+

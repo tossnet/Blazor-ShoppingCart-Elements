@@ -13,4 +13,5 @@ System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");
 
 builder.RootComponents.RegisterCustomElement<ShoppingCart.UI.Components.ShoppingSelect>("shopping-select");
 
+
 await builder.Build().RunAsync();
