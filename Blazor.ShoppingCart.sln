@@ -9,11 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.ShoppingCart.Server"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.UI", "ShoppingCart.UI\ShoppingCart.UI.csproj", "{4D0935FB-B472-427F-8026-9D138C75A0FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-ShoppingCart", "WPF-ShoppingCart\WPF-ShoppingCart.csproj", "{CC713E07-1609-4165-9AB2-9772CD7E23C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF-ShoppingCart", "WPF-ShoppingCart\WPF-ShoppingCart.csproj", "{CC713E07-1609-4165-9AB2-9772CD7E23C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui-ShoppingCart", "Maui-ShoppingCart\Maui-ShoppingCart.csproj", "{BC432D6E-D5D2-473C-BF80-AD1E73397A72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maui-ShoppingCart", "Maui-ShoppingCart\Maui-ShoppingCart.csproj", "{BC432D6E-D5D2-473C-BF80-AD1E73397A72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms-ShoppingCart", "WinForms-ShoppingCart\WinForms-ShoppingCart.csproj", "{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms-ShoppingCart", "WinForms-ShoppingCart\WinForms-ShoppingCart.csproj", "{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular-ShoppingCart", "Angular-ShoppingCart\Angular-ShoppingCart.esproj", "{55B50E28-559E-45D6-B512-38B0BDDCEEAE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "react-shoppingcart", "React-ShoppingCart\react-shoppingcart.esproj", "{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,18 @@ Global
 		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B50E28-559E-45D6-B512-38B0BDDCEEAE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
