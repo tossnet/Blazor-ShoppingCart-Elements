@@ -1,0 +1,23 @@
+﻿@using ShoppingCart.UI.Models;
+@using System.Windows;
+
+<h1>Hello, world!</h1>
+
+<ShoppingCart.UI.Components.ShoppingSelect SoftwareUnitPrice="299"
+										   OptionUnitPrice="99"
+										   ModuleUnitPrice="79"
+										   TrainingUnitPrice="75"
+										   CartValidated="CartValidated" />
+
+@code {
+	private void CartValidated(Cart cart) {
+
+		string messageBoxText = $"Total cart : {cart.TotalAmount}";
+		string caption = "Shopping";
+		MessageBoxButton button = MessageBoxButton.YesNoCancel;
+		MessageBoxImage icon = MessageBoxImage.Question;
+		MessageBoxResult result;
+
+		result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+	}
+}

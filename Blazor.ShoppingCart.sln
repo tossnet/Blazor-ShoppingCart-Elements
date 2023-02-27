@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.UI", "Shopping
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-ShoppingCart", "WPF-ShoppingCart\WPF-ShoppingCart.csproj", "{CC713E07-1609-4165-9AB2-9772CD7E23C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui-ShoppingCart", "Maui-ShoppingCart\Maui-ShoppingCart.csproj", "{BC432D6E-D5D2-473C-BF80-AD1E73397A72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms-ShoppingCart", "WinForms-ShoppingCart\WinForms-ShoppingCart.csproj", "{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,16 @@ Global
 		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC713E07-1609-4165-9AB2-9772CD7E23C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC432D6E-D5D2-473C-BF80-AD1E73397A72}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A350D6A0-F6A8-453A-9BBC-4EAAAB639C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

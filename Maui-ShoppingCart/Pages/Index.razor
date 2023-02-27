@@ -1,0 +1,22 @@
+﻿@page "/"
+@using ShoppingCart.UI.Models;
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<ShoppingCart.UI.Components.ShoppingSelect SoftwareUnitPrice="299"
+										   OptionUnitPrice="99"
+										   ModuleUnitPrice="79"
+										   TrainingUnitPrice="75"
+										   CartValidated="CartValidated" />
+
+@code {
+	private async void CartValidated(Cart cart ) {
+		await App.Current.MainPage.DisplayAlert(
+			title: "Panier",
+			message : $"{cart.TotalAmount.ToString("#.00")}",
+			cancel:"OK");
+			
+	}
+}

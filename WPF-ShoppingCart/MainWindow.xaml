@@ -12,7 +12,7 @@
 
         <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}" x:Name="blazorWebView1">
             <blazor:BlazorWebView.RootComponents>
-                <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:ShoppingSelect}" />
+                <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:Index}" />
             </blazor:BlazorWebView.RootComponents>
         </blazor:BlazorWebView>
     </Grid>
