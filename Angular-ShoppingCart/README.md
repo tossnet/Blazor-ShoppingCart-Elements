@@ -14,14 +14,34 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## CE
+Dans angular.json : ajouter 
+"src/_framework",
+"src/_content"
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+          "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/_framework",
+              "src/_content"
+            ],
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Dans src/index.html :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  <link href="Blazor.ShoppingCart.Wasm.styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+  <script src="_framework/blazor.webassembly.js" autostart="true"></script>
+
+  <app-root></app-root>
+
+Dans src/app/app.module.ts modifier en ajoutant "CUSTOM_ELEMENTS_SCHEMA" :
+
+       import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+et plus bas : 
+      
+        schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

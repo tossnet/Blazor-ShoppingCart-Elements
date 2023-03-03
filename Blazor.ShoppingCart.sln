@@ -19,6 +19,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular-ShoppingCart", "Ang
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "react-shoppingcart", "React-ShoppingCart\react-shoppingcart.esproj", "{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "vue-shoppingcart", "Vue-ShoppingCart\vue-shoppingcart.esproj", "{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,12 @@ Global
 		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00A95F4B-68FD-44EB-8AA4-696FD8D0229D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B3B4D5-50FD-44D4-9475-902B4FDC3035}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
