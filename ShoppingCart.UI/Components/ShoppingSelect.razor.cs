@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Components;
 using ShoppingCart.UI.Models;
 using ShoppingCart.UI.Services;
 
-public partial class ShoppingSelect {
-
+public partial class ShoppingSelect
+{
     [Parameter]
     public double SoftwareUnitPrice { get; set; } = 999;
 
@@ -21,21 +21,23 @@ public partial class ShoppingSelect {
     [Parameter]
     public EventCallback<Cart> CartValidated { get; set; }
 
-
-
     private Cart Cart { get; set; } = new();
+    
     private PriceCalculation PriceCalculation { get; set; } = new();
 
-    private int ModuleUnit {
+    private int ModuleUnit
+    {
         get => Cart.ModuleUnit;
-        set {
+        set
+        {
             Cart.ModuleUnit = value;
 
             ComputePrice();
         }
     }
 
-    protected override void OnParametersSet() {
+    protected override void OnParametersSet()
+    {
 
         Cart.SoftwareUnitPrice = SoftwareUnitPrice;
         Cart.OptionUnitPrice = OptionUnitPrice;
@@ -47,37 +49,43 @@ public partial class ShoppingSelect {
         base.OnParametersSet();
     }
 
-    private void SoftUnitChanged(int softunit) {
+    private void SoftUnitChanged(int softunit)
+    {
         Cart.SoftwareUnit = softunit;
 
         ComputePrice();
     }
 
-    private void OptionChecked(ChangeEventArgs e) {
+    private void OptionChecked(ChangeEventArgs e)
+    {
         Cart.OptionUnit = (bool)e.Value;
 
         ComputePrice();
     }
 
-    private void TrainingUnitChanged(ChangeEventArgs e) {
+    private void TrainingUnitChanged(ChangeEventArgs e)
+    {
         Cart.TrainingUnit = int.Parse(e.Value.ToString());
 
         ComputePrice();
     }
 
-    private string GetLabelQuantity(int quantity) {
+    private string GetLabelQuantity(int quantity)
+    {
         return quantity > 1 ? $"{quantity} unités" : "1 unité";
     }
 
-    private void ComputePrice() {
+    private void ComputePrice()
+    {
         Cart.TotalAmount = PriceCalculation.Calculate(Cart);
     }
 
-    private async Task NextStep() {
+    private async Task NextStep()
+    {
 
-        if (CartValidated.HasDelegate) {
+        if (CartValidated.HasDelegate)
+        {
             await CartValidated.InvokeAsync(Cart);
         }
     }
-
 }

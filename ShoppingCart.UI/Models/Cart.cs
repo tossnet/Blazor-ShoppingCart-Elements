@@ -1,13 +1,15 @@
 ﻿namespace ShoppingCart.UI.Models;
 
-public class Cart {
+public class Cart
+{
 
     private const double DISCOUNT2 = 0.80;
     private const double DISCOUNT3 = 0.65;
     private const double DISCOUNT4 = 0.55;
     private const double DISCOUNT5 = 0.50;
 
-    public Cart() {
+    public Cart()
+    {
         SoftwareUnit = 1;
         SoftwareUnitPrice = 999.0;
         OptionUnitPrice = 999.0;
@@ -15,8 +17,10 @@ public class Cart {
         TrainingUnitPrice = 999.0;
     }
 
-    public double GetSoftwarePrice(int licence) {
-        return licence switch {
+    public double GetSoftwarePrice(int licence)
+    {
+        return licence switch
+        {
             2 => SoftwareUnitPrice * DISCOUNT2,
             3 => SoftwareUnitPrice * DISCOUNT3,
             4 => SoftwareUnitPrice * DISCOUNT4,
@@ -25,8 +29,10 @@ public class Cart {
         };
     }
 
-    public double GetTotalSoftwarePrice() {
-        return SoftwareUnit switch {
+    public double GetTotalSoftwarePrice()
+    {
+        return SoftwareUnit switch
+        {
             2 => SoftwareUnitPrice * (1 + DISCOUNT2),
             3 => SoftwareUnitPrice * (1 + DISCOUNT2 + DISCOUNT3),
             4 => SoftwareUnitPrice * (1 + DISCOUNT2 + DISCOUNT3 + DISCOUNT4),
