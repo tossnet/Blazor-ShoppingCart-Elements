@@ -2,10 +2,10 @@
 
 using ShoppingCart.UI.Models;
 
-public class PriceCalculation {
-
-    public double Calculate(Cart panier) {
-
+public class PriceCalculation
+{
+    public double Calculate(Cart panier)
+    {
         panier.TotalAmount = panier.GetTotalSoftwarePrice();
 
         panier.TotalAmount += Convert.ToDouble(panier.OptionUnit) * panier.OptionUnitPrice;
