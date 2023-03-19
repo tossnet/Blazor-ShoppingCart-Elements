@@ -23,4 +23,4 @@ Et bien c'est ce que nous allons vous montrer !
 
 ## Slides
 
-[Télécharger une copie de la présentation ici](DevDay2023-Blazor beyond the web.pdf)
+[Télécharger une copie de la présentation ici](DevDay2023-BlazorBeyondTheWeb.pdf)
